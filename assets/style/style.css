@@ -1,0 +1,234 @@
+*{
+    font-family: 'Fira Sans', sans-serif;
+    padding: 0%;
+    margin: 0%;
+    background-color: #fff;
+    color: #003f62;
+    font-family: 'Fira Sans','Raleway', sans-serif;
+    box-sizing: border-box;
+}
+.required label:after{
+    color: #cc5757;
+    content: ' *';
+}
+
+.dblock{
+    display: block;
+}
+
+
+.payment_form{
+   max-width: 98%;
+   padding:30px  ;
+   margin: 30px auto;
+   
+}
+
+.header{
+    display: flex;
+}
+
+.title{
+    max-width: 49%;
+    font-size:32px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+    font-style:normal;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    flex-grow: 1;
+}
+
+.form_logo{
+    max-width: 49%;
+    width: 100%;
+}
+/*======= Client Info =======*/
+.form_row{
+    display: flex;
+    margin: 15px 0;
+}
+.form_row label{
+    max-width: 22%;
+    width: 100%;
+    font-family: Fira Sans;
+    font-size: 15px;
+    font-weight: 500;
+    flex-grow: 1;
+}
+.form_row input{
+    max-width: 55%;
+    width: 100%;
+    flex-grow: 1;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #565a5c;
+    font-size: 1em;
+    padding: 8px 10px;
+    vertical-align: top;
+    overflow: visible;
+    line-height: 1.5;
+}
+.client_info .form_row{
+    position: relative;
+
+}
+.client_info .form_row input{
+    padding-left: 28px;
+}
+.currency_wraper{
+    position: relative;
+}
+.input_currency{
+    width: fit-content!important;
+}
+
+.currency_label{
+    color: #555;
+    font-size: 15px;
+    padding: 9px 0 9px 12px;
+    position: absolute;
+    top: 50%;
+    left: 0.2%;
+    z-index: 1;
+    transform: translateY(-50%);
+    background-color: transparent;
+}
+.input_currency{
+    flex-grow: 0!important  ;
+    position: relative;
+}
+
+/*==== Payment Billing Info ====*/
+
+.payment_billing_info{
+    display: flex;
+}
+
+
+
+/*======= Payment Info (Left Side) =======*/
+.info_title{
+    padding:18px 18px 18px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    font-family: Fira Sans;
+}
+.payment_info,
+.billig_info{
+    max-width: 49%;
+    width: 100%;
+}
+.expiration_date{
+    display: flex;
+    gap: 5px;
+}
+#expiration_year,
+#expiration_month,
+.state,
+.country{
+    flex-grow: 1;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #565a5c;
+    font-size: 1em;
+    padding: 8px 10px;
+    vertical-align: top;
+    overflow: visible;
+    line-height: 1.5;
+}
+.card_icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.card_icons > svg,
+.card_icons > img{
+    width: 67px;
+    height: auto;
+}
+/*======= Billing Info (Right Side) =======*/
+
+.billig_info input{
+    max-width: 100%;
+}
+
+.form_btn{
+    background-color: #3ea56b;
+    border-color: #2e955b;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 35px;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 7px 13px;
+    vertical-align: middle;
+    transition: background-color .4s ease;
+}
+
+/*======= Submit Button =======*/
+
+.form_btn:hover{
+    background-color: #1e854b;
+}
+
+/*======= Responsive Start =======*/
+
+@media screen and (max-width: 991px){
+    .payment_billing_info{
+        flex-direction: column-reverse;
+    }
+    .payment_info,
+    .billig_info{
+        max-width: 100%;
+        width: 100%;
+}
+}
+
+/*======= Responsive at 768 =======*/
+@media screen and (max-width: 768px){
+    
+    .header {
+        justify-content: space-between;
+    }
+    .form_logo{
+        text-align: end;
+    }
+    .form_logo img{
+        width: 100px;
+    }
+    .title{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .form_row{
+        flex-direction: column;
+    }
+    .form_row input,
+    .form_row select
+    {
+        margin-top: 5px;
+        max-width: 100%
+    }
+    .form_row label{
+        max-width: 100%;
+    }
+    /* .client_info .form_row input{
+        padding-left: 0;
+    } */
+    .expiration_date{
+        flex-direction: column;
+    margin-top: 5px;
+    }
+    .currency_label{
+        top: 53%;
+    }
+
+}
